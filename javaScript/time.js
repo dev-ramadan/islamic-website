@@ -3,9 +3,6 @@ $(document).ready(function () {
     $(".them").css('background-color', JSON.parse(localStorage.getItem("thems")));
     $("footer").css('background-color', JSON.parse(localStorage.getItem("thems")));
     $(".times").css('border-color', JSON.parse(localStorage.getItem("thems")));
-    $(".date").css('border-color', JSON.parse(localStorage.getItem("thems")));
-    $(".timeName").css('border-color', JSON.parse(localStorage.getItem("thems")));
-    $(".time").css('border-color', JSON.parse(localStorage.getItem("thems")));
   }
   $("#nav").fadeIn(1000);
   $(".box").css("display", 'flex')
@@ -53,8 +50,8 @@ $(document).ready(function () {
       time.innerHTML = `
             <div class="col-12  date">
             <div><h5>${dateHijri.date}</h5></div>
-            <div><h5>${dateHijri.weekday.ar}--${dateHijri.day}--${dateHijri.month.ar
-        }</h5></div>
+            <div><h5>${dateHijri.weekday.ar}--${dateHijri.day}--${dateHijri.month.ar}
+            </h5></div>
             <div><h5>${dateAPI.date}</h5></div>
             </div>
                     <div class="col-12 d-flex justify-content-between flex-column gap-4 time-piranr">
@@ -85,6 +82,11 @@ $(document).ready(function () {
       
             </div>
             `;
+      if (localStorage.getItem("thems") !== null) {
+        $(".date").css('border-color', JSON.parse(localStorage.getItem("thems")));
+        $(".timeName").css('border-color', JSON.parse(localStorage.getItem("thems")));
+        $(".time").css('border-color', JSON.parse(localStorage.getItem("thems")));
+      }
 
       // ايجاد الصلاة التالية
       const prayers = {
