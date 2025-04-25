@@ -10,16 +10,56 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/livePage.css">
   <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/nav&footer.css" />
+  <link rel="stylesheet" href="./css/themBox.css" />
+  <link rel="stylesheet" href="./css/loading.css" />
+
+
+
+
+  
 </head>
 
 <body>
   <div class="website">
     <div class="spinner">
-      <span class="loader"></span>
+      <div class="image-logo">
+          <img src="dist/image/loading.png" alt="قرآنك" width="60" class="max-w-full max-h-full">
+      </div>
+      <div class="circle">
+      </div>
     </div>
-    <div id="nav"></div>
+    <div id="navHome">
+      <nav class="them navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid position-relative">
+          <a class="navbar-brand" href="index.html"><img src="dist/image/loo.png" class="logo img-fluid"></img></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars menu"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  mb-2 mb-lg-0 col-lg-6 justify-content-around offset-3" style="width:fit-content;z-index: 10;">
+              <li class="w-auto"><a class="list" href="dous.html">أدعية <i class="fas fa-pray"></i></a></li>
+              <li class="w-auto"><a class="list" href="azkar.html">أذكار <i class="fa fa-book"></i></a></li>
+              <li class="w-auto"><a class="list" href="time.html">مواقيت الصلاة <i class="fa fa-mosque"></i></a></li>
+              <li class="w-auto"><a class="list" href="moshf.html"> القران الكريم <i class="fa-solid fa-book-open"></i></a></li>
+                <li><a class="list" href="index.html">الرئيسية <i class="fa fa-home"></i></a></li>
+            </ul>
+            <div class="w-75   position-absolute d-flex justify-content-end" style="right: 10px; bottom: 18px;">
+              <li class="nav-item text-light radio offset-6">
+                <a id="radioButton" class="btn btn-success ply-btn btn-play"
+                  data-url="https://stream.radiojar.com/8s5u5tpdtwzuv">
+                  <i class="fas fa-radio" style="color: #fff;"></i>
+                  راديو قرآن
+                </a>
+              </li>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
     <!-- them -->
     <div id="thems"></div>
     <div class="background">
@@ -121,7 +161,6 @@
   </div>
   <!-- script -->
   <script src="javaScript/thems.js"></script>
-  <script src="javaScript/NavBar.js"></script>
   <script src="javaScript/footer.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="javaScript/bootstrap.bundle.js"></script>

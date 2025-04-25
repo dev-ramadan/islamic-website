@@ -1,0 +1,38 @@
+body{
+  overflow: hidden;
+}
+  .prophetic_duas,.quran_duas,
+  .prophets_duas,.quran_completion_duas{
+    width: 80%;
+    margin: 20px auto;
+    margin-top: 100px;
+    height:350px;
+    overflow: hidden;
+  background: white;
+
+} 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+th {
+  background: #2a9d8f;
+  color: white;
+}
+.more-btn {
+  background: #2a9d8f;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+.more{
+height: auto;
+}
+

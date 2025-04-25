@@ -29,35 +29,10 @@
   display: flex;
   justify-content: space-around;
 }
-
-.box{
-    width: fit-content;
-    display: flex;
-    align-items: start;
-    position: fixed;
-    top: 110px;
-    left: -195.75px;
-    z-index: 10000000000;
-    display: none;
-  }
-  .box .colors{
-    color: white;
-    background-color: #e9c5c5;
-    border: solid 4px black;
-    padding: 10px;
-  }
-  .box .costmize{
-background-color: #f3f3f3;
-  }
-  .box i{
-    background-color: black;
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-  }
-  .color-item{
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    background-color: orange;
-  }
+.date {
+  border: 2px solid brown;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 20px;
+}

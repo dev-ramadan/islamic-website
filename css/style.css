@@ -1,9 +1,12 @@
+
+.modal{
+  z-index: 10000000000;
+}
 .website {
   width: 0px;
   height: 10px;
   margin: auto;
   background-color: #a52a2a;
-  /* overflow: hidden; */
 }
 
 .player {
@@ -16,32 +19,6 @@
   margin: auto;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-.logo {
-  width: 60px;
-  border-radius: 100%;
-}
-
-.them {
-  background-color: #a52a2a;
-}
-
-#nav {
-  position: fixed;
-  width: 100%;
-  z-index: 100;
-  top: 0%;
-  display: none;
-}
-
-.nav-link {
-  color: white;
-}
-
-.nav-link:hover {
-  color: black;
-}
-
 .slid-row {
   height: 200px;
   align-items: center;
@@ -63,6 +40,7 @@
 .fa-circle-play {
   font-size: 2rem;
   cursor: pointer;
+  color: white;
 }
 
 .input-serch {
@@ -94,7 +72,21 @@
   justify-content: center;
   align-items: center;
 }
-
+.all-reciters{
+  display: flex;
+  justify-content: end;
+  gap: 7px;
+}
+.all-reciters span{
+  display: inline-block;
+  margin-right: 10px;
+  background-color: #1AC15C;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 7px;
+  color: white;
+  font-weight: bold;
+}
 .background .arrow {
   background-color: #80808098;
   display: flex;
@@ -148,7 +140,6 @@
   position: relative;
   margin-top: 80px;
   height: auto;
-  /* display: none; */
 }
 
 .sc2 .hadith-logo {
@@ -179,7 +170,7 @@
 /* swiper slid */
 .swiper-container {
   width: 80%;
-  height: 250px;
+  height: 290px;
   margin: auto;
   margin-top: 50px;
   overflow: hidden;
@@ -193,162 +184,6 @@
   border-radius: 10px;
   margin-bottom: 10px;
 }
-
-.video {
-  display: flex;
-  width: 100%;
-  height: 400px;
-  margin-bottom: 80px;
-  margin-top: 25px;
-}
-
-.video video {
-  padding: 10px;
-}
-
-.date {
-  border: 2px solid brown;
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  border-radius: 20px;
-}
-
-/* footer */
-ul {
-  list-style: none;
-}
-
-.footer {
-  background-color: brown;
-  padding: 70px 0;
-}
-
-.footer-col {
-  width: 25%;
-  padding: 0 15px;
-}
-
-.footer-col h4 {
-  font-size: 18px;
-  color: #ffffff;
-  text-transform: capitalize;
-  margin-bottom: 35px;
-  font-weight: 500;
-  position: relative;
-}
-
-.footer-col h4::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  background-color: #e91e63;
-  height: 2px;
-  box-sizing: border-box;
-  width: 50px;
-}
-
-.footer-col ul li:not(:last-child) {
-  margin-bottom: 10px;
-}
-
-.footer-col ul li a {
-  font-size: 16px;
-  text-transform: capitalize;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 300;
-  color: #bbbbbb;
-  display: block;
-  transition: all 0.3s ease;
-}
-
-.footer-col ul li a:hover {
-  color: #ffffff;
-  padding-left: 8px;
-}
-
-.footer-col .social-links a {
-  display: inline-block;
-  height: 40px;
-  width: 40px;
-  background-color: rgba(255, 255, 255, 0.2);
-  margin: 0 10px 10px 0;
-  text-align: center;
-  line-height: 40px;
-  border-radius: 50%;
-  color: #ffffff;
-  transition: all 0.5s ease;
-}
-
-.footer-col .social-links a:hover {
-  color: #24262b;
-  background-color: #ffffff;
-}
-
-#quranLive,
-#sunaLive {
-  width: 100%;
-  height: 400px;
-  display: none;
-}
-
-.playVideo {
-  position: absolute;
-  top: 50%;
-}
-
-.box {
-  width: fit-content;
-  display: flex;
-  align-items: start;
-  position: fixed;
-  top: 110px;
-  left: -195.75px;
-  display: none;
-  z-index: 1000;
-}
-
-.box .colors {
-  color: white;
-  background-color: #e9c5c5;
-  border: solid 4px black;
-  padding: 10px;
-}
-
-.box .costmize {
-  background-color: #f3f3f3;
-}
-
-.box i {
-  background-color: black;
-  color: white;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.color-item {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  background-color: orange;
-}
-
-/*responsive*/
-@media(max-width: 767px) {
-  .footer-col {
-    width: 50%;
-    margin-bottom: 30px;
-  }
-}
-
-@media(max-width: 574px) {
-  .footer-col {
-    width: 50%;
-  }
-}
-
 @media only screen and (max-width: 575px) {
   .mopile-pirant {
     flex-direction: column;
@@ -365,7 +200,7 @@ ul {
   .modal {
     width: 100%;
     margin-left: auto;
-    margin-left: auto;
+    z-index: 10000000000;
   }
 
   .serch-name {

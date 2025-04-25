@@ -1,6 +1,4 @@
-const fristScroll = () => {
-  window.scrollTo(0, 550);
-};
+
 $(document).ready(function () {
   if (localStorage.getItem("thems") !== null) {
     $(".them").css('background-color', JSON.parse(localStorage.getItem("thems")));
@@ -17,6 +15,9 @@ $(document).ready(function () {
       audioPlayer.classList.add("player");
     }
   });
+   window.fristScroll = () => {
+    window.scrollTo(0, 550);
+  };
   const opt = document.querySelector("#surah-list");
   const karae = document.querySelector("#reciter-list");
   const triwayat = document.querySelector("#riwayat");
@@ -81,7 +82,7 @@ $(document).ready(function () {
       const data = await response.json();
       const finalData = data.audio_files;
 
-      opt.innerHTML = '<option value="">اختر السورة</option>'; 
+      opt.innerHTML = '<option value="">اختر السورة</option>';
 
       // إضافة التلاوات إلى القائمة
       finalData.map((recitation) => {
@@ -92,7 +93,6 @@ $(document).ready(function () {
           }`;
         opt.appendChild(option);
       });
-      console.log(" تم تحميل السور بنجاح!");
     } catch (error) {
       console.error("خطأ أثناء تحميل السور:", error);
     }
@@ -168,48 +168,46 @@ $(document).ready(function () {
       console.error("خطأ في جلب البيانات:", error);
     }
   })();
-  $(".spinner .loader").fadeOut(1500, function () {
-    $(".spinner").slideUp(1000, function () {
-      $("body").css("overflow", "auto");
-      // anmation
-
-      $(".website").animate({ width: "100%" }, 1000);
-      $(".website").animate({ height: "100vh" }, 1000, function () {
-        $(".background .arrow").slideDown(1000)
-        $(".website #nav").fadeIn(1000);
-        $(".box").css("display", 'flex')
-      });
-      $(window).scroll(function () {
-        if (window.scrollY > 500) {
-          $(".website #nav").fadeOut(1000);
-        } else {
-          $(".website #nav").fadeIn(1000);
-        }
-      });
-    });
-  });
-  // them action
-  $(".fa-gear").click(() => {
-    let x = $(".colors").outerWidth();
-    if ($(".box").css("left") === '0px') {
-      $(".box").animate({ left: `-${x}` }, 1000)
-    } else {
-      $(".box").animate({ left: `0px` }, 1000)
-
-    }
-  });
-  let spans = $(".colors span");
-  for (let i = 0; i < spans.length; i++) {
-    let dataColor = spans[i].getAttribute("data-color");
-    spans[i].style.backgroundColor = dataColor
-  };
-  $(spans).click((e) => {
-    let thems = $(e.target).css('background-color');
-    $(".them").css('background-color', thems);
-    $("footer").css('background-color', thems);
-    $(".arrow i").css('color', thems);
-    $(".quicGoin").css('border-color', thems);
-    $(".quicGoin").css('color', thems);
-    localStorage.setItem('thems', JSON.stringify(thems));
-  })
+   // anmation
+   $(".website").animate({ width: "100%" }, 1000);
+   $(".website").animate({ height: "100vh" }, 1000, function () {
+     $(".background .arrow").slideDown(1000)
+     $(".website #nav").fadeIn(1000);
+     $(".website #navHome").fadeIn(1000);
+     $("#radioButton").fadeIn(1000);
+     $(".box").css("display", 'flex')
+   });
+   $(window).scroll(function () {
+     if (window.scrollY > 500) {
+       $(".website #nav").fadeOut(1000);
+     } else {
+       $(".website #nav").fadeIn(1000);
+     }
+   });
+ });
+ // them action
+ $(".fa-gear").click(() => {
+   let x = $(".colors").outerWidth();
+   if ($(".box").css("left") === '0px') {
+     $(".box").animate({ left: `-${x}` }, 1000)
+   } else {
+     $(".box").animate({ left: `0px` }, 1000)
+   }
+ });
+ let spans = $(".colors span");
+ for (let i = 0; i < spans.length; i++) {
+   let dataColor = spans[i].getAttribute("data-color");
+   spans[i].style.backgroundColor = dataColor
+ };
+ $(spans).click((e) => {
+   let thems = $(e.target).css('background-color');
+   $(".them").css('background-color', thems);
+   $("#navHome").css('background-color', thems);
+   $("footer").css('background-color', thems);
+   $(".arrow i").css('color', thems);
+   $(".quicGoin").css('border-color', thems);
+   $(".quicGoin").css('color', thems);
+   $(".serch-name").css('border-color', thems);
+   $(".all-reciters span").css('background-color', thems);
+   localStorage.setItem('thems', JSON.stringify(thems));
 });
