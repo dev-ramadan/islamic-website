@@ -108,6 +108,7 @@ $(document).ready(function () {
       audio.type = "audio/ogg";
     });
   }
+  $('#radioButton').click((e) => audio.src = e.target.getAttribute("data-url"))
 
   // البحث عن القارئ
   window.serch = async function (reciter) {
